@@ -16,6 +16,7 @@ function start(){
       stardust: [0],
     },
     xp: {
+      all: 0,
       woodcutting: 0,
       mining: 0,
       gathering: 0,

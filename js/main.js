@@ -37,9 +37,11 @@ function doAction(type, tier){
   index = array1.indexOf(type)
   let array2 = ["logs", "stone", "stardust"]
   let playerIdentifier = array2[index]
+  let skillNames = ["woodcutting", "mining", "gathering"]
+  let xpType = skillNames[index]
   tmp.params = [playerIdentifier, tier, 1, true]
   tmp.timeLeft = 5 + tier*3
-  tmp.currentAction = [playerIdentifier, tier]
+  tmp.currentAction = [playerIdentifier, tier, xpType]
 }
 
 function updateInventory(){
@@ -88,7 +90,7 @@ function update(diff){
 function updateProgress(type, tier){
   document.getElementById("progress").innerHTML = String(itemNames[type][tier]).charAt(0).toUpperCase() + String(itemNames[type][tier]).slice(1) + " - "+tmp.timeLeft.toFixed(3)+"s/"+((5+3*tier)/timeBoost()).toFixed(3)+"s"
 }
-function timeBoost() {
+function timeBoost(skill="none") {
   return 1
 }
 setInterval(function() {
@@ -96,3 +98,9 @@ setInterval(function() {
   update(diff)
   tmp.lasttick = Date.now()/1000
 })
+function addXP(tier, actionType){
+  tier += 1
+  let amount = ((tier * tier) + tier)/2
+  player.xp[actionType] += amount
+  player.xp.all += amount
+}
