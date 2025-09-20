@@ -34,7 +34,7 @@ div {
 .smalltab {
   margin-top: 0.5%;
   margin-bottom: 0.5%;
-  width: 48%;
+  min-width: 48%;
   border: 2px solid white;
   color: white;
   height: 5%;
@@ -50,7 +50,7 @@ div {
   border: none;
   margin-bottom: 1%;
   color: white;
-  height: 7%;
+  min-height: 7%;
   background: rgba(255,255,255,0.1);
   font-size: 16px;
   transition: .3s;
