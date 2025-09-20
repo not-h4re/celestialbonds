@@ -16,11 +16,13 @@ function start(){
       stardust: [0],
     },
     xp: {
-      all: 0,
-      woodcutting: 0,
-      mining: 0,
-      gathering: 0,
+      all: 100,
+      woodcutting: 100,
+      mining: 100,
+      gathering: 100,
     },
+    righttab: 'inventory',
+    rocketProg: 0,
   }
   return a
 }

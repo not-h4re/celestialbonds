@@ -19,16 +19,17 @@
     </div>
     <div style="width: 50%; height: 100%;">
       <div class="progress">
-        <span class="progcont" id="progress">
+        <div class="progcont" id="progress">
           Nothing
-        </span>
+        </div>
       </div>
       <span class="container" id="main">
       </span>
     </div>
     <div style="width: 30%; height: 100%; border-left: 3px solid rgba(255,255,255,0.5);">
       <span class="container">
-        <button class="smalltab">Inventory</button>
+        <button class="smalltab" onclick="righttab('inventory')">Inventory</button>
+        <button class="smalltab" onclick="righttab('levels')">Levels</button>
         <div id="inventory" style="width: 100%; height: 80%;"></div>
       </span>
     </div>
